@@ -1,0 +1,70 @@
+TDD(Test-driven development)->coding practice where you write the result you want your program to produce before creating the program.
+TDD requires you to pre-specify the output your intended program must produce to pass the test of functioning the way you envisioned.
+
+The Step in TDD
+1) Write a test specifying the result you expect the calculator to produce to pass the test of being the program you had in mind.
+2) Develop the calculator to pass the prewritten test.
+3) Run the test to check whether the calculator passes or fails the test.
+4) Refactor your test code (if necessary).
+5) Refactor your program (if necessary).
+6) Continue the cycle until the calculator matches your vision.
+
+installing 
+npm init -y
+npm install jest --save-dev
+for jest to recognize the test it most end with .test.js
+
+to run the Test
+npm run test for multiple file just run the file name with it
+auto run test just add --watchAll to jest
+
+adding es6 modues with jest
+npm install @babel/preset-env --save-dev
+
+
+Addvantage of TDD -> {
+    Understand your program  ->  makes you think about what you want your program to do
+    confidence booster -> {
+        TDD is a benchmark for knowing that your program is working as expected. 
+        It gives you the confidence that your program is working correctly.
+    }
+    TDD term -> unit test and integration test and E2E and test doubles
+    Unit Test in TDD is a test  you write to assess the functionality of an independent piece of a program
+    integration test in TDD -> assesses the functionality of a dependent piece of program. 
+    End to End Test in TDD ->  test assesses the functionality of a user interface. In other words    
+    Test Double in TDD are the  imitation objects used to mimic real dependencies like databases, libraries, networks, and APIs.
+    test double allows you to bypass the natural objects on which your program depends
+    example of test DOuble - >suppose the API's service is available only in production—not in the development environment. In that case, you've got two options:
+    Wait until your app goes live—which could take months.
+    Clone the API so you can continue your test irrespective of the dependency's availability.
+    Test doubles provide a helpful way to clone your program's dependencies so that your testing activities won't encounter any disruptions
+    Dummy in TDD -> is a test double used to mimic the value of a specififc dependency
+    Dummy => allows you to pass in pretend values to the parameters of that method.
+    Mock in TDD => is a test double that use to mimic an external dependency without considering the responses the deoendency you may return
+    mock  allows you to bypass the API so that you can focus on testing your code regardless of the Facebook API's availability.
+    Stub in TDD -> Test Double that use to mimic an external dependency while returning hand-coded values.
+    Stub  allows you to bypass the API while mimicking the exact values Facebook will return
+    fake in TDD is a test double that use to create a working test implementation of an external dependency with a dynamic values
+}
+
+ReactTest component = (2) => A test runner tool and a react component testing tool{
+    The different bettwent test runner and react testing tool{
+        
+        test runner are tool developer use to run a test script and print the test results on the command line
+        for instance supposed you want to run App.test.js you will need a test runner to execute and print the results on the command line
+        test runner are Jasmine and Mocha and Tape and Jest
+
+        React Test component provides helpful api for defining a components test case
+        React test case example -> suppose you need to test your project's <App /> component. In such a case, you will use a React component testing tool to define the component's test cases.
+        react test case are Enzyme and React testing library(https://testing-library.com/docs/react-testing-library/intro)
+        react doc -> https://reactjs.org/docs/testing.html#tools
+    }
+    create a react app -> npx create-react-app react-testing-project
+    What is jest -> test runner tool that use to run project test script and print the test results on the command line
+    @testing-library/react is a react testing library which give a api need for writing a test cases
+    @Testing-library/jest-dom provides some set of custom jest matcher for testing dom state
+    Note:jest already comes with lots of matchers, so using jest-dom is optional. jest-dom simply extends Jest by providing matchers that make your test more declarative, clear to read, and easy to maintain.
+    @testing-library/user-event provides the uerEvent api for simulating user interaction with your app on a web page
+    note ->  @testing-library/user-event is a better alternative to the fireEvent API.
+    
+}
